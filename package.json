@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "ts-patch": "^2.0.1"
+  },
+  "scripts": {
+    "setup": "npm i && ts-patch install"
+  }
+}

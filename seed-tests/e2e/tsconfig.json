@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "importHelpers": false,
+    "plugins": [{
+      "transform": "@nativescript/webpack/transformers/ns-transform-native-classes",
+      "type": "raw"
+    }],
+    "types": [
+      "mocha",
+      "chai",
+      "node"
+    ],
+    "lib": [
+      "es2015",
+      "dom"
+    ],
+    "baseUrl": "."
+  }
+}
