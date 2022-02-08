@@ -1,8 +1,7 @@
 import * as geolocation from '@nativescript/geolocation';
-import { Utils } from '@nativescript/core';
-Utils.Accuracy; // used to describe at what accuracy the location should be get
+import { Utils, Application, ApplicationSettings } from '@nativescript/core';
+//Utils.Accuracy; // used to describe at what accuracy the location should be get
 
-import {Application,ApplicationSettings} from '@nativescript/core';
 type LocationData = { service: string, key: string };
 
 
@@ -11,7 +10,7 @@ type LocationData = { service: string, key: string };
 //type LocationData = { service: string, key: string };
 
 @NativeClass()
-export class ScheduledLocationUpdate extends NSObject implements CLLocationManagerDelegate {
+class ScheduledLocationUpdate extends NSObject implements CLLocationManagerDelegate {
 
     public static ObjCProtocols = [CLLocationManagerDelegate];
     private locationManager: CLLocationManager = null;
@@ -380,6 +379,8 @@ export class ScheduledLocationUpdate extends NSObject implements CLLocationManag
   //#endregion Helper
 
 }
+
+export { ScheduledLocationUpdate } 
 
 export function getInstance(): ScheduledLocationUpdate {
   return ScheduledLocationUpdate.getInstance();
